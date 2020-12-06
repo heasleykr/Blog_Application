@@ -18,5 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls), #admin view
+    path('accounts/', include('django.contrib.auth.urls')), # mapped to django internal module. Object for auth. 
+    path('accounts/', include('accounts.urls')),
     path('', include('blog.urls')), # home page view
 ]
