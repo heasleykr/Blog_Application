@@ -1,22 +1,19 @@
 <!-- template/home.html -->
 {% extends 'base.html' %}
 
-{% block content %}
-          <!-- TRIAL -->
-    <nav id="navbar-example3" class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+{% block content %} 
+    <div data-bs-spy="scroll" data-bs-target="#scrolly" data-bs-offset="0" tabindex="0">
         {% for post in object_list %}
-            <nav class="nav nav-pills flex-column">
-                    <a class="nav-link" href="#{{ post.title }}">{{ post.title }}</a>
-            </nav>
+            <div class="card">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                <h5 class="card-title"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h5>
+                <p class="card-text">{{ post.body }}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
         {% endfor %}
-    </nav>
-    
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
-    {% for p in object_list %}
-            <h4 id="{{ p.title }}" href="{% url 'post_detail' p.pk %}">{{ p.title }}</h4>
-            <p>{{ p.body }}</p>
-    {% endfor %}
     </div>
 {% endblock content %}
-

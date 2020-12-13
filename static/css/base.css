@@ -1,10 +1,9 @@
 /* static/css/base.css */
 
 /* Global */
-/* body {
-    font-family: 'Architects Daughter', cursive;
-    font-size: 18px;
-}*/
+body {
+    background-color: #362626;
+}
 
 /* NavBar & Intro */
 #backdrop {
@@ -33,18 +32,49 @@
 }
 
 /* Main Body Content */
+#mainView {
+    background-color: white;
+}
 
 /* LeftScroll */
 #leftScroll {
-    background-color: #dedede;
+    background-color: #2e2020;
+}
+
+#inspo {
+    margin-top: 7rem;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    justify-content: center;
+}
+
+#inspo h4 {
+    padding-top: 2rem;
+}
+
+#inspo img {
+    height: 100px;
+    width: 100px;
+    color: white;
 }
 
 /* Blog Posts */
-#scrolly{
+#pins {
+    display: flex;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+#scrolly {
     position: relative;
     height: 30rem;
     overflow-y: scroll;
+    margin-top: 3rem;
 }
+
 /* #pinned {
     margin-top: 1rem;
     border-bottom: 1px solid grey;
