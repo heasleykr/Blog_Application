@@ -9,9 +9,8 @@
                     Featured
                 </div>
                 <div class="card-body">
-                <h5 class="card-title"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h5>
-                <p class="card-text">{{ post.body }}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h5>
+                    <p class="card-text">{{ post.body }}</p>
                 </div>
             </div>
         {% endfor %}
